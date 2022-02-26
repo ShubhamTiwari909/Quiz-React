@@ -16,14 +16,21 @@ const Main = props => {
         <div style={{ display: props.display ? "none" : "grid" }} className='bg-zinc-900'>
             <div className="portfolio--buttons">
                 <div>
-                    <Link to='/blogs'>
+                    <Link to='/about'>
                         <button
                             className={buttonStyling}>
-                            <p>Blogs</p>
+                            <p>About</p>
                         </button>
                     </Link>
                 </div>
-
+                <div>
+                    <Link to='/skills'>
+                        <button
+                            className={buttonStyling}>
+                            <p>Skills</p>
+                        </button>
+                    </Link>
+                </div>
                 <div>
                     <Link to='/projects'>
                         <button
@@ -33,10 +40,10 @@ const Main = props => {
                     </Link>
                 </div>
                 <div>
-                    <Link to='/about'>
+                    <Link to='/blogs'>
                         <button
                             className={buttonStyling}>
-                            <p>About</p>
+                            <p>Blogs</p>
                         </button>
                     </Link>
                 </div>
@@ -45,14 +52,6 @@ const Main = props => {
                         <button
                             className={buttonStyling}>
                             <p>Contact</p>
-                        </button>
-                    </Link>
-                </div>
-                <div>
-                    <Link to='/skills'>
-                        <button
-                            className={buttonStyling}>
-                            <p>Skills</p>
                         </button>
                     </Link>
                 </div>

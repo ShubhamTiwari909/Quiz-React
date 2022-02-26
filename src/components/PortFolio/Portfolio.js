@@ -17,7 +17,7 @@ function Portfolio() {
         </h1>
       <div style={{ display: display ? "grid" : "none" }} className="grid grid-cols-1 place-items-center text-slate-200 py-5 text-2xl Landing--Page">
         <h1 className='text-slate-200 font-mono font-semibold text-5xl px-10 text-center photoHeading'>Hello, I'm Shubham Tiwari, Frontend Web Developer</h1>
-        <Link to='/blogs' onClick={isDisplay} className='ring-2 ring-slate-200 px-10 py-2 bg-slate-800 rounded-md shadow-lg shadow-slate-200'>Open »</Link>
+        <Link to='/about' onClick={isDisplay} className='ring-2 ring-slate-200 px-10 py-2 bg-slate-800 rounded-md shadow-lg shadow-slate-200'>Open »</Link>
       </div>
       <Routes>
         <Route exact path='/*' element={<Main display={display} isDisplay={isDisplay} />} />
