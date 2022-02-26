@@ -28,7 +28,7 @@ function Footer() {
               <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">Profile</h2>
               <nav className="list-none mb-10">
                 <li className='my-5'>
-                  <p className="text-gray-400 hover:text-white">Universite - Quantum University</p>
+                  <p className="text-gray-400 hover:text-white">University - Quantum University</p>
                 </li>
                 <li className='my-5'>
                   <a className="text-gray-400 hover:text-white" href='https://github.com/ShubhamTiwari909/' rel="noreferrer" target='_blank'>Github</a>
