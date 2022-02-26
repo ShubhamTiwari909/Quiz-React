@@ -55,7 +55,7 @@
   
   @media screen and (min-width:400px) and (max-width:768px){
     .bg-text{
-      width: 80%;
+      width: 50%;
       top: 25%;
     }
     .postTitle{
