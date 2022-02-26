@@ -45,7 +45,7 @@ function Skills() {
         <div className="bg-gray-600 h-10 text-slate-100 text-center rounded-md place-self-start py-2" style={{ width: "55%" }}>55%</div>
       </div>
       <div className="grid grid-cols-2 place-items-center w-full bg-zinc-900 h-5 my-6 py-5">
-        <h1 className='flex font-semibold font-mono text-slate-100'><p>NODE JS</p> <GrNode size='1.5rem' color='#00FF40' /></h1>
+        <h1 className='flex font-semibold font-mono text-slate-100'><p>NODE</p> <GrNode size='1.5rem' color='#00FF40' /></h1>
         <div className="bg-green-600 h-10 text-slate-100 text-center rounded-md place-self-start py-2" style={{ width: "35%" }}>35%</div>
       </div>
     </div>
