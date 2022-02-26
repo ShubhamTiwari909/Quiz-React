@@ -14,9 +14,9 @@ const About = () => {
                 </div>
             </h1>
             <div className="flex flex-col justify-center align-middle bg-slate-800 pb-20">
-                <img src={Myself} className="mb-5 ring-8 ring-blue-200" />
-                <img src={Skills} className="my-5 ring-8 ring-blue-200" />
-                <img src={Education} className="my-5 ring-8 ring-blue-200" />
+                <img alt="About Images" src={Myself} className="mb-5 ring-8 ring-blue-200" />
+                <img alt="About Images" src={Skills} className="my-5 ring-8 ring-blue-200" />
+                <img alt="About Images" src={Education} className="my-5 ring-8 ring-blue-200" />
             </div>
         </div>
 
