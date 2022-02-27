@@ -1,5 +1,7 @@
 import React from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
+import RubberBand from 'react-reveal/RubberBand';
+import Flip from 'react-reveal/Flip';
 import About from './About'
 import Blog from './Blog'
 import Contact from './Contact'
@@ -42,23 +44,27 @@ const Main = props => {
                 {
                     NavButtons.map(item => {
                         return (
-                            <div>
-                                <Link to={item.link}>
-                                    <button
-                                        className={buttonStyling}>
-                                        <p>{item.linkName}</p>
-                                    </button>
-                                </Link>
-                            </div>
+                            <RubberBand>
+                                <div>
+                                    <Link to={item.link}>
+                                        <button
+                                            className={buttonStyling}>
+                                            <p>{item.linkName}</p>
+                                        </button>
+                                    </Link>
+                                </div>
+                            </RubberBand>
                         )
                     })
 
                 }
                 <div>
-                    <button onClick={props.isDisplay}
-                        className="flex space-x-3 mr-2 font-semibold bg-gradient-to-r from-slate-100 via-slate-300 to-slate-400 
-                    text-gray-800 rounded-sm ring-2 ring-blue-200 px-4 py-2
-                    hover:bg-white hover:text-white hover:ring-slate-300 mx-4 hover:text-indigo-600">Home</button>
+                    <Flip right>
+                        <button onClick={props.isDisplay}
+                            className="flex space-x-3 mr-2 font-semibold bg-gradient-to-r from-slate-100 via-slate-300 to-slate-400 
+                            text-gray-800 rounded-sm ring-2 ring-blue-200 px-4 py-2
+                            hover:bg-white hover:text-white hover:ring-slate-300 mx-4 hover:text-indigo-600">Home</button>
+                    </Flip>
                 </div>
             </div>
 

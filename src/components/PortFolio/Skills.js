@@ -8,6 +8,7 @@ import { SiTailwindcss } from 'react-icons/si'
 import { FaReact } from 'react-icons/fa'
 import { GrMysql } from 'react-icons/gr'
 import { GrNode } from 'react-icons/gr'
+import LightSpeed from 'react-reveal/LightSpeed';
 
 function Skills() {
   const SkillsData = [
@@ -61,9 +62,11 @@ function Skills() {
     }
   ]
   return (
-    <div className='' 
-    style={{backgroundImage : "url('https://wallpaperaccess.com/full/26174.png')",
-    backgroundSize : "cover"}}>
+    <div className=''
+      style={{
+        backgroundImage: "url('https://wallpaperaccess.com/full/26174.png')",
+        backgroundSize: "cover"
+      }}>
       <h1 className='flex justify-center text-3xl text-slate-200 font-semibold bg-gradient-to-r from-slate-500 to-slate-800
       py-6'>
         Skills <GiSkills size='2.5rem' style={{ margin: "0 1rem" }} />
@@ -72,8 +75,10 @@ function Skills() {
         SkillsData.map(item => {
           return (
             <div className="grid grid-cols-2 place-items-center w-full my-4 py-5">
-              <h1 className='flex font-semibold font-mono text-slate-100'><p>{item.SkillName}</p> {item.SkillLogo}</h1>
-              <div className={`${item.Color} h-10 text-purple-100 font-bold text-center rounded-md place-self-start py-2 animate-pulse`} style={{ width: item.SkillPercentage }}>{item.SkillPercentage}</div>
+              <LightSpeed left>
+                <h1 className='flex font-semibold font-mono text-slate-100'><p>{item.SkillName}</p> {item.SkillLogo}</h1>
+                <div className={`${item.Color} h-10 text-purple-100 font-bold text-center rounded-md place-self-start py-2 animate-pulse`} style={{ width: item.SkillPercentage }}>{item.SkillPercentage}</div>
+              </LightSpeed>
             </div>
           )
         })

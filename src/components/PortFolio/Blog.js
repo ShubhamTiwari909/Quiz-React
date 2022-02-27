@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Fade from 'react-reveal/Fade';
 import Blog1 from './BlogImages/Blog1.jpg'
 import Blog2 from './BlogImages/Blog2.jpg'
 import Blog3 from './BlogImages/Blog3.jpg'
@@ -66,7 +67,7 @@ function Blog() {
   ]
 
   const styling = `grid grid-cols-1 place-items-center bg-neutral-900
-   my-8 pb-10 px-3 mx-10 ring-8 ring-indigo-400 rounded-md shadow-xl shadow-slate-600 ${animate ? 'animate-spin' : ""}`
+   my-8 pb-10 px-3 mx-10 ring-4 ring-indigo-400 rounded-md shadow-xl shadow-slate-600 ${animate ? 'animate-spin' : ""}`
   return (
     <div>
       <h1 className='flex justify-center text-3xl text-slate-200 font-semibold bg-gradient-to-r from-slate-500 to-slate-800
@@ -82,6 +83,7 @@ function Blog() {
       <div className='grid grid-cols-1 place-items-center my-5 py-5'>
         {BlogData.map(item => {
           return (
+            <Fade bottom>
               <div key={item.Title} className={styling}>
                 <img src={item.BlogImage} alt="Blogs Thumbnail" className='border-2 border-b-blue-300' />
                 <h1 className='text-slate-200 text-xl text-center font-mono font-semibold py-6 border-b-2 border-solid border-indigo-300'>{item.Title}</h1>
@@ -90,6 +92,7 @@ function Blog() {
               py-2 px-5 my-10 text-slate-200 font-bold'>Read Blog</a>
                 <h2 className='text-slate-200 py-6'>Date Published : {item.BlogDate}</h2>
               </div>
+            </Fade>
           )
         })
         }

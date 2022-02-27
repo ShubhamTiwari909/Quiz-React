@@ -2,6 +2,7 @@ import React from 'react'
 import { AiOutlineFundProjectionScreen } from 'react-icons/ai';
 import Project1 from './images/Project1.png'
 import Project2 from './images/Project2.png'
+import Tada from 'react-reveal/Tada';
 
 function Project() {
   const ProjectData = [
@@ -34,20 +35,22 @@ function Project() {
       <div className='grid grid-cols-1 place-items-center my-5 py-5'>
         {ProjectData.map(item => {
           return (
-            <div key={item.ProjectTitle} className="grid grid-cols-1 justify-items-center bg-neutral-900
-            my-8 pb-10 px-3 mx-10 ring-8 ring-indigo-400 rounded-md shadow-xl shadow-slate-400">
-              <img src={item.ProjectImage} alt="Blogs Thumbnail" className='border-2 border-b-blue-300' />
-              <div className='grid grid-cols-1 place-items-start'>
-                <h1 className='text-slate-200 text-xl font-mono font-semibold my-4 px-4 py-6 border-l-2 border-solid border-indigo-300'>Project : {item.ProjectTitle}</h1>
-                <h1 className='text-slate-200 text-xl font-mono font-semibold my-4 px-4 py-6 border-l-2 border-solid border-indigo-300'>Languages : {item.LanguagesUsed}</h1>
-                <h1 className='text-slate-200 text-xl font-mono font-semibold my-4 px-4 py-6 border-l-2 border-solid border-indigo-300'>{item.API}</h1>
-                <h1 className='text-slate-200 text-xl font-mono font-semibold py-6 my-4 px-4 border-l-2 border-solid border-indigo-300'>{item.ProjectDescription}</h1>
-              </div>
-              <a href={item.ProjectLink} target='_blank' rel="noreferrer"
-                className='ring-2 ring-indigo-300 rounded-md bg-gradient-to-r from-indigo-500 via-purple-700 to pink-800 
+            <Tada>
+              <div key={item.ProjectTitle} className="grid grid-cols-1 justify-items-center bg-neutral-900
+            my-8 pb-10 px-3 mx-10 ring-2 ring-indigo-400 rounded-md shadow-xl shadow-slate-400">
+                <img src={item.ProjectImage} alt="Blogs Thumbnail" className='border-2 border-b-blue-300' />
+                <div className='grid grid-cols-1 place-items-start'>
+                  <h1 className='text-slate-200 text-xl font-mono font-semibold my-4 px-4 py-6 border-l-2 border-solid border-indigo-300'>Project : {item.ProjectTitle}</h1>
+                  <h1 className='text-slate-200 text-xl font-mono font-semibold my-4 px-4 py-6 border-l-2 border-solid border-indigo-300'>Languages : {item.LanguagesUsed}</h1>
+                  <h1 className='text-slate-200 text-xl font-mono font-semibold my-4 px-4 py-6 border-l-2 border-solid border-indigo-300'>{item.API}</h1>
+                  <h1 className='text-slate-200 text-xl font-mono font-semibold py-6 my-4 px-4 border-l-2 border-solid border-indigo-300'>{item.ProjectDescription}</h1>
+                </div>
+                <a href={item.ProjectLink} target='_blank' rel="noreferrer"
+                  className='ring-2 ring-indigo-300 rounded-md bg-gradient-to-r from-indigo-500 via-purple-700 to pink-800 
               py-2 px-5 my-10 text-slate-200 font-bold'>Open Project</a>
-              <h2 className='text-slate-200 py-6'>Date Published : {item.Date}</h2>
-            </div>
+                <h2 className='text-slate-200 py-6'>Date Published : {item.Date}</h2>
+              </div>
+            </Tada>
           )
         })
         }
