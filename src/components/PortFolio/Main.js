@@ -8,6 +8,7 @@ import Contact from './Contact'
 import Projects from './Project'
 import Skiils from './Skills'
 import Footer from './Footer'
+import Resume from './Resume'
 import './Portfolio.css'
 
 const Main = props => {
@@ -31,6 +32,10 @@ const Main = props => {
         {
             link: "/contact",
             linkName: "Contact"
+        },
+        {
+            link: "/resume",
+            linkName: "Resume"
         }
     ]
     const buttonStyling = `flex space-x-3 mr-2 font-semibold 
@@ -58,14 +63,14 @@ const Main = props => {
                     })
 
                 }
-                <div>
-                    <Flip right>
-                        <button onClick={props.isDisplay}
-                            className="flex space-x-3 mr-2 font-semibold bg-gradient-to-r from-slate-100 via-slate-300 to-slate-400 
+            </div>
+            <div className='grid grid-cols-1 place-items-center mb-5'>
+                <Flip right>
+                    <button onClick={props.isDisplay}
+                        className="flex space-x-3 mr-2 font-semibold bg-gradient-to-r from-slate-100 via-slate-300 to-slate-400 
                             text-gray-800 rounded-sm ring-2 ring-blue-200 px-4 py-2
                             hover:bg-white hover:text-white hover:ring-slate-300 mx-4 hover:text-indigo-600">Home</button>
-                    </Flip>
-                </div>
+                </Flip>
             </div>
 
             <div>
@@ -75,6 +80,7 @@ const Main = props => {
                     <Route exact path='/about' element={<About />} />
                     <Route exact path='/contact' element={<Contact />} />
                     <Route exact path='/skills' element={<Skiils />} />
+                    <Route exact path='/resume' element={<Resume />} />
                 </Routes>
             </div>
             <div>
