@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import Blog1 from './BlogImages/Blog1.jpg'
 import Blog2 from './BlogImages/Blog2.jpg'
 import Blog3 from './BlogImages/Blog3.jpg'
@@ -7,7 +7,7 @@ import Blog5 from './BlogImages/Blog5.jpg'
 import Blog6 from './BlogImages/Blog6.jpg'
 import Blog7 from './BlogImages/Blog7.jpg'
 import Blog8 from './BlogImages/Blog8.jpg'
-import {SiBlogger} from 'react-icons/si'
+import { SiBlogger } from 'react-icons/si'
 
 function Blog() {
   const [animate, setAnimate] = useState(true);
@@ -66,30 +66,30 @@ function Blog() {
   ]
 
   const styling = `grid grid-cols-1 place-items-center bg-neutral-900
-   my-8 pb-10 px-3 mx-10 ring-8 ring-indigo-400 rounded-md shadow-xl shadow-slate-400 ${animate ? 'animate-spin' : ""}`
+   my-8 pb-10 px-3 mx-10 ring-8 ring-indigo-400 rounded-md shadow-xl shadow-slate-600 ${animate ? 'animate-spin' : ""}`
   return (
     <div>
       <h1 className='flex justify-center text-3xl text-slate-200 font-semibold bg-gradient-to-r from-slate-500 to-slate-800
       py-5 mt-5'>
-        Blog  <SiBlogger size='2.5rem' style={{margin :"0 1rem"}} />
-        </h1>
-      <h1 className='mx-5 text-slate-300 font-semibold my-10 text-2xl'>I write Blogs on a Platform named  
-      <a href='https://dev.to/' target='_blank'  rel="noreferrer" className='text-blue-600 font-semibold'> Dev Community</a> 
-      , it is a Blogging Platform where we write blogs only related to Coding and Progamming
-       and is similar to a Social Media App where we can get likes , views , comments , saves etc.
-       Some of my Blogs are mentioned below.</h1>
+        Blog  <SiBlogger size='2.5rem' style={{ margin: "0 1rem" }} />
+      </h1>
+      <h1 className='mx-5 text-slate-300 font-semibold my-10 text-2xl'>I write Blogs on a Platform named
+        <a href='https://dev.to/' target='_blank' rel="noreferrer" className='text-blue-600 font-semibold'> Dev Community</a>
+        , it is a Blogging Platform where we write blogs only related to Coding and Progamming
+        and is similar to a Social Media App where we can get likes , views , comments , saves etc.
+        Some of my Blogs are mentioned below.</h1>
 
       <div className='grid grid-cols-1 place-items-center my-5 py-5'>
         {BlogData.map(item => {
           return (
-            <div key={item.Title} className={styling}>
-              <img src={item.BlogImage} alt="Blogs Thumbnail" className='border-2 border-b-blue-300' />
-              <h1 className='text-slate-200 text-xl text-center font-mono font-semibold py-6 border-b-2 border-solid border-indigo-300'>{item.Title}</h1>
-              <a href={item.BlogLink} target='_blank' rel="noreferrer"
-              className='ring-2 ring-indigo-300 rounded-md bg-gradient-to-r from-indigo-500 via-purple-700 to pink-800 
+              <div key={item.Title} className={styling}>
+                <img src={item.BlogImage} alt="Blogs Thumbnail" className='border-2 border-b-blue-300' />
+                <h1 className='text-slate-200 text-xl text-center font-mono font-semibold py-6 border-b-2 border-solid border-indigo-300'>{item.Title}</h1>
+                <a href={item.BlogLink} target='_blank' rel="noreferrer"
+                  className='ring-2 ring-indigo-300 rounded-md bg-gradient-to-r from-indigo-500 via-purple-700 to pink-800 
               py-2 px-5 my-10 text-slate-200 font-bold'>Read Blog</a>
-              <h2 className='text-slate-200 py-6'>Date Published : {item.BlogDate}</h2>
-            </div>
+                <h2 className='text-slate-200 py-6'>Date Published : {item.BlogDate}</h2>
+              </div>
           )
         })
         }
