@@ -1,4 +1,4 @@
-.portfolio--buttons {
+.portfolio--header {
     display: grid;
     place-content: center;
     place-items: center;
@@ -22,10 +22,11 @@
         height: 84vh;
         background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMlJSDZ8Zp2v1xT2BDtsbrAGc7cRHzNzbUkQ&usqp=CAU');
     }
-    .portfolio--buttons {
+    .portfolio--header {
         grid-template-columns: repeat(3,1fr);
     }
     .photoHeading{
         display: block;
     }
+    
 }

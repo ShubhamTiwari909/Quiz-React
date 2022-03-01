@@ -67,12 +67,13 @@ function Blog() {
   ]
 
   const styling = `grid grid-cols-1 place-items-center bg-neutral-900
-   my-8 pb-10 px-3 mx-10 ring-4 ring-indigo-400 rounded-md shadow-xl shadow-slate-600 ${animate ? 'animate-spin' : ""}`
+   my-8 pb-10 px-3 mx-10 ring-4 ring-indigo-400 rounded-br-lg rounded-tl-lg shadow-xl shadow-slate-600 ${animate ? 'animate-spin' : ""}`
   return (
     <div>
       <h1 className='flex justify-center text-3xl text-slate-200 font-semibold bg-gradient-to-r from-slate-500 to-slate-800
       py-5 mt-5'>
-        Blog  <SiBlogger size='2.5rem' style={{ margin: "0 1rem" }} />
+        <p className='bg-clip-text text-transparent bg-gradient-to-r from-purple-200 via-blue-200 to-purple-200'>Blog</p>  
+        <SiBlogger size='2.5rem' style={{ margin: "0 1rem" }} />
       </h1>
       <h1 className='mx-5 text-slate-300 font-semibold my-10 text-2xl'>I write Blogs on a Platform named
         <a href='https://dev.to/' target='_blank' rel="noreferrer" className='text-blue-600 font-semibold'> Dev Community</a>

@@ -26,6 +26,7 @@
     padding: 3rem;
     border: 2px solid white;
     border-radius: 10px;
+    border-bottom-right-radius: 0px;
     text-shadow: 1px 1px 3px black;
   }
   

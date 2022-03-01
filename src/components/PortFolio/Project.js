@@ -29,7 +29,8 @@ function Project() {
     <div>
       <h1 className='flex justify-center text-3xl text-slate-200 font-semibold bg-gradient-to-r from-slate-500 to-slate-800
       py-5 mt-5'>
-        Projects <AiOutlineFundProjectionScreen size='2.5rem' style={{ margin: "0 1rem" }} />
+        <p className='bg-clip-text text-transparent bg-gradient-to-r from-purple-200 via-blue-200 to-purple-200'>Projects</p>
+        <AiOutlineFundProjectionScreen size='2.5rem' style={{ margin: "0 1rem" }} />
       </h1>
 
       <div className='grid grid-cols-1 place-items-center my-5 py-5'>
