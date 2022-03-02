@@ -10,9 +10,9 @@ import Pulse from 'react-reveal/Pulse';
 const Contact = () => {
   const [display, setDiplay] = useState(false);
   return (
-    <div>
+    <div className='bg-neutral-900'>
       <h1 className='flex justify-center text-3xl text-slate-200 font-semibold bg-gradient-to-r from-slate-500 to-slate-800
-      py-5 my-5'>
+      py-5 my-5 border-4 border-y-violet-500'>
         <p className='bg-clip-text text-transparent bg-gradient-to-r from-purple-200 via-blue-200 to-purple-200'>Contact</p>
         <div>
           <MdOutlineConnectWithoutContact size='2.5rem' />

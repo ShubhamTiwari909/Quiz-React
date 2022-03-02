@@ -69,9 +69,9 @@ function Blog() {
   const styling = `grid grid-cols-1 place-items-center bg-neutral-900
    my-8 pb-10 px-3 mx-10 ring-4 ring-indigo-400 rounded-br-lg rounded-tl-lg shadow-xl shadow-slate-600 ${animate ? 'animate-spin' : ""}`
   return (
-    <div>
+    <div className='bg-neutral-900'>
       <h1 className='flex justify-center text-3xl text-slate-200 font-semibold bg-gradient-to-r from-slate-500 to-slate-800
-      py-5 mt-5'>
+      py-5 mt-5 border-4 border-y-violet-500'>
         <p className='bg-clip-text text-transparent bg-gradient-to-r from-purple-200 via-blue-200 to-purple-200'>Blog</p>  
         <SiBlogger size='2.5rem' style={{ margin: "0 1rem" }} />
       </h1>
@@ -81,13 +81,13 @@ function Blog() {
         and is similar to a Social Media App where we can get likes , views , comments , saves etc.
         Some of my Blogs are mentioned below.</h1>
 
-      <div className='grid grid-cols-1 place-items-center my-5 py-5'>
+      <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 place-items-center my-5 py-5'>
         {BlogData.map(item => {
           return (
             <Fade bottom>
               <div key={item.Title} className={styling}>
                 <img src={item.BlogImage} alt="Blogs Thumbnail" className='border-2 border-b-blue-300' />
-                <h1 className='text-slate-200 text-xl text-center font-mono font-semibold py-6 border-b-2 border-solid border-indigo-300'>{item.Title}</h1>
+                <h1 className='text-slate-200 text-md lg:text-lg md:text-lg text-center font-mono font-semibold py-6 border-b-2 border-solid border-indigo-300'>{item.Title}</h1>
                 <a href={item.BlogLink} target='_blank' rel="noreferrer"
                   className='ring-2 ring-indigo-300 rounded-md bg-gradient-to-r from-indigo-500 via-purple-700 to pink-800 
               py-2 px-5 my-10 text-slate-200 font-bold'>Read Blog</a>

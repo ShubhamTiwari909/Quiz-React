@@ -62,13 +62,13 @@ function Skills() {
     }
   ]
   return (
-    <div className=''
+    <div className='bg-neutral-900'
       style={{
         backgroundImage: "url('https://wallpaperaccess.com/full/26174.png')",
         backgroundSize: "cover"
       }}>
       <h1 className='flex justify-center text-3xl text-slate-200 font-semibold bg-gradient-to-r from-slate-500 to-slate-800
-      py-6'>
+      py-6 border-4 border-y-violet-500'>
         <p className='bg-clip-text text-transparent bg-gradient-to-r from-purple-200 via-blue-200 to-purple-200'>Skills</p>
         <GiSkills size='2.5rem' style={{ margin: "0 1rem" }} />
       </h1>

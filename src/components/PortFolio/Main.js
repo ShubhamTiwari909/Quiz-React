@@ -44,7 +44,7 @@ const Main = props => {
     focus:bg-slate-200 focus:text-indigo-800
     hover:bg-slate-300 hover:text-purple-700 hover:ring-purple-800 navButtons`;
     return (
-        <div style={{ display: props.display ? "none" : "grid" }} className='bg-zinc-900'>
+        <div style={{ display: props.display ? "none" : "grid" }} className='bg-neutral-800'>
             <div className="portfolio--header">
                 {
                     NavButtons.map(item => {

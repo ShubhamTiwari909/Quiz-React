@@ -11,8 +11,8 @@ function Portfolio() {
   const isDisplay = () => setDisplay(!display)
   return (
     <div>
-
-      <h1 className='flex justify-center space-x-3 text-purple-300 bg-neutral-900 text-ellipsis text-3xl py-4 text-center border-b-2 border-indigo-400'>
+      <h1 className='flex justify-center space-x-3 text-purple-300 bg-stone-900 text-ellipsis text-3xl py-4 text-center border-b-2 border-indigo-400
+      '>
         <Tada>
           <p className='bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-purple-500 to-purple-300'>PORTFOLIO</p>
           <div>
