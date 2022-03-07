@@ -27,8 +27,8 @@ function Project() {
   ]
   return (
     <div className='bg-neutral-900'>
-      <h1 className='flex justify-center text-3xl text-slate-200 font-semibold bg-gradient-to-r from-slate-500 to-slate-800
-      py-5 mt-5 border-4 border-y-violet-500'>
+      <h1 className='flex justify-center text-3xl text-slate-200 font-semibold bg-gradient-to-r from-slate-700 to-slate-900
+      py-5 mt-5 border-y-4 border-y-violet-600'>
         <p className='bg-clip-text text-transparent bg-gradient-to-r from-purple-200 via-blue-200 to-purple-200'>Projects</p>
         <AiOutlineFundProjectionScreen size='2.5rem' style={{ margin: "0 1rem" }} />
       </h1>

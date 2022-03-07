@@ -5,9 +5,12 @@ import { DiCss3 } from 'react-icons/di'
 import { IoLogoJavascript } from 'react-icons/io'
 import { SiBootstrap } from 'react-icons/si'
 import { SiTailwindcss } from 'react-icons/si'
-import { FaReact } from 'react-icons/fa'
+import { FaFilePowerpoint, FaReact } from 'react-icons/fa'
 import { GrMysql } from 'react-icons/gr'
 import { GrNode } from 'react-icons/gr'
+import {BsFileEarmarkWord} from 'react-icons/bs'
+import {FaRegFilePowerpoint} from 'react-icons/fa'
+import {SiVuedotjs} from 'react-icons/si'
 import LightSpeed from 'react-reveal/LightSpeed';
 
 function Skills() {
@@ -49,7 +52,7 @@ function Skills() {
       SkillLogo: <FaReact size='1.5rem' color='#00FFFF' />
     },
     {
-      SkillName: "mysql",
+      SkillName: "MySQL",
       SkillPercentage: "55%",
       Color: "bg-gradient-to-r from-gray-600 via-gray-400 to-gray-300",
       SkillLogo: <GrMysql size='1.5rem' color='gray' />
@@ -59,6 +62,24 @@ function Skills() {
       SkillPercentage: "35%",
       Color: "bg-gradient-to-r from-green-700 via-green-500 to-green-300",
       SkillLogo: <GrNode size='1.5rem' color='#00FF40' />
+    },
+    {
+      SkillName: "MS Word",
+      SkillPercentage: "75%",
+      Color: "bg-gradient-to-r from-blue-600 via-blue-400 to-blue-300",
+      SkillLogo: <BsFileEarmarkWord size='1.5rem' color='cyan' />
+    },
+    {
+      SkillName: "MS Powerpoint",
+      SkillPercentage: "60%",
+      Color: "bg-gradient-to-r from-red-600 via-red-400 to-red-300",
+      SkillLogo: <FaRegFilePowerpoint size='1.5rem' color='crimson' />
+    },
+    {
+      SkillName: "Vue",
+      SkillPercentage: "40%",
+      Color: "bg-gradient-to-r from-green-500 via-green-400 to-green-300",
+      SkillLogo: <SiVuedotjs size='1.5rem' color='#32CD32' />
     }
   ]
   return (
@@ -67,8 +88,8 @@ function Skills() {
         backgroundImage: "url('https://wallpaperaccess.com/full/26174.png')",
         backgroundSize: "cover"
       }}>
-      <h1 className='flex justify-center text-3xl text-slate-200 font-semibold bg-gradient-to-r from-slate-500 to-slate-800
-      py-6 border-4 border-y-violet-500'>
+      <h1 className='flex justify-center text-3xl text-slate-200 font-semibold bg-gradient-to-r from-slate-700 to-slate-900
+      py-6 border-y-4 border-y-violet-600'>
         <p className='bg-clip-text text-transparent bg-gradient-to-r from-purple-200 via-blue-200 to-purple-200'>Skills</p>
         <GiSkills size='2.5rem' style={{ margin: "0 1rem" }} />
       </h1>
