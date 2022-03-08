@@ -69,7 +69,7 @@ function Blog() {
   const styling = `grid grid-cols-1 place-items-center bg-neutral-900
    my-8 pb-10 px-3 mx-10 ring-4 ring-indigo-400 rounded-br-lg rounded-tl-lg shadow-xl shadow-slate-800 ${animate ? 'animate-spin' : ""}`
   return (
-    <div className='bg-neutral-200'>
+    <div className='bg-gradient-to-r from-neutral-200 via-neutral-300 to-neutral-400'>
       <h1 className='flex justify-center text-3xl text-slate-200 font-semibold bg-gradient-to-r from-slate-700 to-slate-900
       py-5 mt-5 border-y-4 border-y-violet-600'>
         <p className='bg-clip-text text-transparent bg-gradient-to-r from-purple-200 via-blue-200 to-purple-200'>Blog</p>  

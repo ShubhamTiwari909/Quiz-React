@@ -26,7 +26,7 @@ function Project() {
     }
   ]
   return (
-    <div className='bg-neutral-900'>
+    <div className='bg-gradient-to-r from-neutral-200 via-neutral-300 to-neutral-400'>
       <h1 className='flex justify-center text-3xl text-slate-200 font-semibold bg-gradient-to-r from-slate-700 to-slate-900
       py-5 mt-5 border-y-4 border-y-violet-600'>
         <p className='bg-clip-text text-transparent bg-gradient-to-r from-purple-200 via-blue-200 to-purple-200'>Projects</p>
@@ -41,10 +41,10 @@ function Project() {
             my-8 pb-10 px-3 mx-10 ring-2 ring-indigo-400 rounded-md shadow-xl shadow-slate-400">
                 <img src={item.ProjectImage} alt="Blogs Thumbnail" className='border-2 border-b-blue-300' />
                 <div className='grid grid-cols-1 place-items-start'>
-                  <h1 className='text-slate-200 text-md font-mono font-semibold my-4 px-4 py-6 border-l-2 border-solid border-indigo-300'>Project : {item.ProjectTitle}</h1>
-                  <h1 className='text-slate-200 text-md font-mono font-semibold my-4 px-4 py-6 border-l-2 border-solid border-indigo-300'>Languages : {item.LanguagesUsed}</h1>
-                  <h1 className='text-slate-200 text-md font-mono font-semibold my-4 px-4 py-6 border-l-2 border-solid border-indigo-300'>{item.API}</h1>
-                  <h1 className='text-slate-200 text-md font-mono font-semibold py-6 my-4 px-4 border-l-2 border-solid border-indigo-300'>{item.ProjectDescription}</h1>
+                  <h1 className='text-slate-200 text-md font-mono font-semibold my-3 lg:my-6 px-4 py-2 border-l-2 border-solid border-indigo-300'>Project : {item.ProjectTitle}</h1>
+                  <h1 className='text-slate-200 text-md font-mono font-semibold my-3 lg:my-6 px-4 py-2 border-l-2 border-solid border-indigo-300'>Languages : {item.LanguagesUsed}</h1>
+                  <h1 className='text-slate-200 text-md font-mono font-semibold my-3 lg:my-6 px-4 py-2 border-l-2 border-solid border-indigo-300'>{item.API}</h1>
+                  <h1 className='text-slate-200 text-md font-mono font-semibold my-3 lg:my-6 px-4 py-2 border-l-2 border-solid border-indigo-300'>{item.ProjectDescription}</h1>
                 </div>
                 <a href={item.ProjectLink} target='_blank' rel="noreferrer"
                   className='ring-2 ring-indigo-300 rounded-md bg-gradient-to-r from-indigo-500 via-purple-700 to pink-800 
