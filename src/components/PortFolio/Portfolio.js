@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Main from './Main'
+import Navbar from './Navbar'
 import { Routes, Route, Link } from 'react-router-dom'
 import { FaUserGraduate } from 'react-icons/fa'
 import Tada from 'react-reveal/Tada';
@@ -30,7 +30,7 @@ function Portfolio() {
         </RubberBand>
       </div>
       <Routes>
-        <Route exact path='/*' element={<Main display={display} isDisplay={isDisplay} />} />
+        <Route exact path='/*' element={<Navbar display={display} isDisplay={isDisplay} />} />
       </Routes>
     </div>
 

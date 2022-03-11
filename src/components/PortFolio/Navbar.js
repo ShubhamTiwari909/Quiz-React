@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import RubberBand from 'react-reveal/RubberBand';
+import { GiArrowDunk } from 'react-icons/gi'
+import {GiReturnArrow} from 'react-icons/gi'
 import Flip from 'react-reveal/Flip';
 import About from './About'
 import Blog from './Blog'
@@ -11,7 +13,9 @@ import Footer from './Footer'
 import Resume from './Resume'
 import './Portfolio.css'
 
-const Main = props => {
+const Navbar = props => {
+    const [mobileNav, setMobileNav] = useState(false)
+
     const NavButtons = [
         {
             link: "/about",
@@ -43,34 +47,47 @@ const Main = props => {
     hover:bg-white hover:text-white hover:ring-slate-300 mx-3 
     focus:bg-slate-200 focus:text-indigo-800
     hover:bg-slate-300 hover:text-purple-700 hover:ring-purple-800 navButtons`;
+
+
     return (
         <div style={{ display: props.display ? "none" : "grid" }} className='bg-neutral-300'>
-            <div className="portfolio--header">
-                {
-                    NavButtons.map(item => {
-                        return (
-                            <RubberBand>
-                                <div>
-                                    <Link to={item.link}>
-                                        <button
-                                            className={buttonStyling}>
-                                            <p>{item.linkName}</p>
-                                        </button>
-                                    </Link>
-                                </div>
-                            </RubberBand>
-                        )
-                    })
-
-                }
+            <div className="flex md:hidden lg:hidden justify-center">
+                <button onClick={() => setMobileNav(!mobileNav)}
+                    className="flex space-x-3 mr-2 font-semibold bg-gradient-to-r from-slate-800 via-slate-700 to-slate-700 
+                            text-gray-200 ring-2 ring-indigo-500  rounded-tr-lg rounded-bl-lg px-5 py-2 my-4
+                            hover:bg-white hover:ring-slate-300 mx-2 hover:text-indigo-600 ">
+                   {mobileNav ? <GiReturnArrow color="white" size="1.4rem" /> : <GiArrowDunk color="white" size="1.4rem" /> }
+                </button>
             </div>
-            <div className='grid grid-cols-1 place-items-center mb-5'>
-                <Flip right>
-                    <button onClick={props.isDisplay}
-                        className="flex space-x-3 mr-2 font-semibold bg-gradient-to-r from-slate-100 via-slate-200 to-slate-200 
+            <div className={mobileNav ? "block md:block lg:block" : "hidden md:block lg:block"}>
+                <div className="portfolio--header">
+                    {
+                        NavButtons.map(item => {
+                            return (
+                                <RubberBand>
+                                    <div>
+                                        <Link to={item.link}>
+                                            <button
+                                                className={buttonStyling}>
+                                                <p>{item.linkName}</p>
+                                            </button>
+                                        </Link>
+                                    </div>
+                                </RubberBand>
+                            )
+                        })
+
+                    }
+                </div>
+                <div className='grid grid-cols-1 place-items-center mb-5'>
+                    <Flip right>
+                        <button onClick={props.isDisplay}
+                            className="flex space-x-3 mr-2 font-semibold bg-gradient-to-r from-slate-100 via-slate-200 to-slate-200 
                             text-gray-800 border-x-4 border-x-purple-700 rounded-tr-lg rounded-bl-lg px-5 py-2
                             hover:bg-white hover:ring-slate-300 mx-4 hover:text-indigo-600 ">Home</button>
-                </Flip>
+                    </Flip>
+                </div>
+
             </div>
 
             <div>
@@ -90,4 +107,4 @@ const Main = props => {
     )
 };
 
-export default Main
+export default Navbar
