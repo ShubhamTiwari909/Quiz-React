@@ -1,11 +1,10 @@
 import React from 'react'
-import { ChakraProvider } from '@chakra-ui/react'
-import Portfolio from './components/PortFolio/Portfolio'
+import Quiz from './components/Quiz/Quiz'
 function App() {
   return (
-    <ChakraProvider>
-      <Portfolio />
-    </ChakraProvider>
+    
+      <Quiz />
+   
   )
 }
 
