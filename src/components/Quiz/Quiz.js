@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { FaArrowCircleUp } from 'react-icons/fa';
+import Tada from 'react-reveal/Tada';
+import Flash from 'react-reveal/Flash';
+
 import './Quiz.css'
 export default function Quiz() {
+
 	const questions = [
 		{
 			questionText: 'CSS stands for -',
@@ -112,17 +116,6 @@ export default function Quiz() {
 		}
 	};
 
-	const [visible, setVisible] = useState(false)
-
-	const toggleVisible = () => {
-		const scrolled = document.documentElement.scrollTop;
-		if (scrolled > 300) {
-			setVisible(true)
-		}
-		else if (scrolled <= 300) {
-			setVisible(false)
-		}
-	};
 
 	const scrollToTop = () => {
 		window.scrollTo({
@@ -133,7 +126,6 @@ export default function Quiz() {
 		});
 	};
 
-	window.addEventListener('scroll', toggleVisible);
 
 	return (
 		<div className='app'>
@@ -151,13 +143,21 @@ export default function Quiz() {
 							<div className='question-count my-5'>
 								<span className='font-sans font-semibold text-md md:text-2xl lg:text-4xl'>Question {currentQuestion + 1}</span>/{questions.length}
 							</div>
-							<div className='question-text font-sans font-semibold text-sm md:text-2xl lg:text-3xl'>{questions[currentQuestion].questionText}</div>
+							<Flash spy={currentQuestion}>
+								<div className='question-text font-sans font-semibold text-sm md:text-2xl lg:text-3xl'>
+									{questions[currentQuestion].questionText}
+								</div>
+							</Flash>
 						</div>
 						<div className='answer-section text-center text-slate-200 grid grid-cols-1'>
 							{questions[currentQuestion].answerOptions.map((answerOption) => (
-								<button className='my-5 px-5 py-2 text-xs md:text-xl lg:text-2xl text-stone-800 font-serif font-semibold bg-gradient-to-r from-slate-400 via-slate-300 
-								to-slate-200 rounded-md ring-2 ring-indigo-300 hover'
-									onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+								<Tada spy={currentQuestion}>
+									<button className='my-5 px-5 py-2 text-xs md:text-xl lg:text-2xl text-stone-800 
+								font-serif font-semibold bg-gradient-to-r from-slate-400 via-slate-300 
+								to-slate-200 rounded-md ring-2 ring-indigo-300 ring-offset-4 ring-offset-indigo-800
+								hover:ring-4 hover:ring-indigo-800 hover:ring-offset-slate-300'
+										onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+								</Tada>
 							))}
 						</div>
 					</div>
@@ -170,3 +170,4 @@ export default function Quiz() {
 
 	);
 }
+
